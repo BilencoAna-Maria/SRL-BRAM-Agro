@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtth=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="../CSS/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="../javascript/script.js"></script>
+    <link rel="icon" href="../imagini/logo.jpg">
+
+    <title>Contacte SRL BRAM-Agro</title>
+</head>
+
+<body onload="startTime()">
+    <header>
+        <img class="logo" src="../imagini/srllogo.png">
+        <navbar>
+            <a href="../index.html">Acasă</a>
+            <!-- <a href="explorează.html">Explorează</a> -->
+            <a href="contacte.html">Contacte</a>
+        </navbar>
+
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+    </header>
+    <main id="color">
+        <section>
+            <h1 class="centered">Contacte</h1>
+            <div class="row">
+                <div class="col-50">
+                    <div class="contacte">
+                        <h2>SRL-BRAM Agro:</h2></b>
+                        <br/>
+                        <i>E-mail:</i>
+                        <a href="mailto:srlbramagro@gmail.com"> srlbramagro@gmail.com</a>
+                        <br/><br/>
+                        <!-- <i>Facebook:</i>
+                        <a target="_blank" href=" " class="link-index1"> </a>
+                        <br/><br/> -->
+                        <i>Telefon :</i>
+                        <a href="tel:+37379980507">+37379980507</a>
+                        <br/><br>
+                        <i>SOS :</i>
+                        <a href="tel:112">112</a>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <form  class="cform" action="https://sheetdb.io/api/v1/tcequ8t1f12qh" method="post">
+                        <h2 class="centered">Contactează-ne</h2>
+                        <input required name="data[Nume]" type="text" placeholder="Nume Prenume">
+                        <input required name="data[e-mail]" type="text" placeholder="e-mail">
+                        <textarea required name="data[Mesaj]" ols="16" rows="5" placeholder="Mesajul"></textarea>
+                        <input required  type="submit" value="Transmite">
+                        
+                        <script>
+                            var form = document.getElementById('formular');
+                            form.addEventListener("submit", e => {
+                              e.preventDefault();
+                              fetch(form.action, {
+                                  method : "POST",
+                                  body: new FormData(document.getElementById("formular")),
+                              }).then(
+                                  response => response.json()
+                              ).then((html) => {
+                                form.reset();
+                                alert('success');
+                              });
+                            });
+                          </script>
+                    </form>
+                </div>
+            </div>
+            <br/>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9630.283577499373!2d28.35207016131037!3d47.8060484319652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sro!2s!4v1737049953415!5m2!1sro!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+        </section>
+    </main>
+    <footer>
+        <span>SRL BRAM-Agro</span><br/>
+        <span> <div id="txt"></div>2025 ©</span>
+    </footer>
+</body>
+</html>
