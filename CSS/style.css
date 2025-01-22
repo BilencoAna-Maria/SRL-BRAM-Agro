@@ -10,9 +10,7 @@ th {
     content: attr(data-day-abbr);
     font-size: 12px;
   }
-iframe{
-    position: centered;
-}
+
 
 header{
     background: #36b97a;
